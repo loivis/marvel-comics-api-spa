@@ -1,0 +1,20 @@
+<div class="button is-info" (click)="backward()">move backward</div>
+<div class="button is-primary" (click)="forward()">move forward</div>
+
+<!-- <div *ngFor="let char of characters | slice: start:start + length">
+  <figure class="image is-128x128">
+    <img src="{{ char.thumbnail }}" alt="{{ char.name }}" />
+  </figure>
+</div> -->
+
+<div class="tile is-ancestor">
+  <div
+    class="tile"
+    *ngFor="let char of characters | slice: start:start + length"
+  >
+    <figure class="image">
+      <img src="{{ char.thumbnail }}" />
+      <div class="tag is-light">{{ char.name }}</div>
+    </figure>
+  </div>
+</div>
